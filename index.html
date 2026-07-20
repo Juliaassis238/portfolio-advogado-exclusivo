@@ -11,15 +11,15 @@
   img { opacity: 1; } /* Garantindo que imagens abram antes dos textos */
 
 :root{
-  --bg:#F9F7F4;
-  --bg2:#F0EDE9;
+  --bg:#FAFAF8;
+  --bg2:#F5F3F0;
   --panel:#FFFFFF;
-  --burgundy:#8C1D26;
-  --burgundy-l:#A8323B;
-  --brass:#A6894B;
-  --text:#1A1614;
-  --muted:#665F58;
-  --line:rgba(26,22,20,.1);
+  --burgundy:#6B3E42;
+  --burgundy-l:#8B5A60;
+  --brass:#9B8B6E;
+  --text:#2A2420;
+  --muted:#7A7268;
+  --line:rgba(42,36,32,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -30,7 +30,7 @@ img{display:block;max-width:100%;}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
 
 header{position:fixed;top:0;left:0;right:0;z-index:100;padding:26px 0;transition:.4s;}
-header.scrolled{background:rgba(249,247,244,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+header.scrolled{background:rgba(250,250,248,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 nav{display:flex;justify-content:space-between;align-items:center;}
 .logo{font-family:'Libre Baskerville',serif;font-size:21px;letter-spacing:.5px;}
 .logo b{color:var(--burgundy);}
@@ -40,25 +40,27 @@ nav{display:flex;justify-content:space-between;align-items:center;}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .burger span{width:24px;height:1px;background:var(--text);}
 
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding-top:100px;}
-.hero-bgimg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.85),rgba(0,0,0,0.65)),url('capa_nova.webp') center/cover no-repeat;}
-.hero-content{position:relative;z-index:1;max-width:760px;}
-.eyebrow{font-size:12.5px;letter-spacing:4px;text-transform:uppercase;color: #D4AF37;margin-bottom:26px;display:flex;align-items:center;gap:14px;}
-.eyebrow::before{content:'';width:40px;height:1px;background: #D4AF37;}
-.hero h1{font-size:clamp(38px,5.4vw,66px);line-height:1.2; color: #FFFFFF;font-weight:700;}
-.hero h1 i{color:#D4AF37;font-style:italic;}
-.hero p{margin-top:26px;color: #E8E8E8;font-size:16.5px;line-height:1.8;max-width:520px;font-weight:300;}
-.hero-actions{display:flex;gap:20px;margin-top:40px;}
-.btn-primary{background:var(--burgundy);color:#fff;padding:17px 36px;font-size:13.5px;letter-spacing:.5px;text-transform:uppercase;transition:.3s;}
-.btn-primary:hover{background:var(--burgundy-l);}
-.btn-ghost{font-size:14px;border-bottom:2px solid #D4AF37;color:#D4AF37;padding-bottom:4px;transition:.3s;}
-.btn-ghost:hover{color:#FFFFFF;border-bottom-color:#FFFFFF;}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding-top:0;}
+.hero-bgimg{position:absolute;inset:0;background:url('capa_nova.webp') center/cover no-repeat;}
 
 section{padding:120px 0;}
 .section-head{margin-bottom:60px;max-width:640px;}
 .section-head .eyebrow{margin-bottom:16px;}
 .section-head h2{font-size:clamp(28px,3.8vw,44px);}
 .section-head p{color:var(--muted);margin-top:16px;line-height:1.75;font-size:15px;}
+
+/* Hero content - moved below */
+.hero-content{position:relative;z-index:1;max-width:760px;text-align:left;background:var(--bg);padding:80px 0;width:100%;}
+.eyebrow{font-size:12.5px;letter-spacing:4px;text-transform:uppercase;color: var(--brass);margin-bottom:26px;display:flex;align-items:center;gap:14px;}
+.eyebrow::before{content:'';width:40px;height:1px;background: var(--brass);}
+.hero-content h1{font-size:clamp(38px,5.4vw,66px);line-height:1.2; color: var(--text);font-weight:700;}
+.hero-content h1 i{color:var(--burgundy);font-style:italic;}
+.hero-content p{margin-top:26px;color: var(--muted);font-size:16.5px;line-height:1.8;max-width:520px;font-weight:300;}
+.hero-actions{display:flex;gap:20px;margin-top:40px;}
+.btn-primary{background:var(--burgundy);color:#fff;padding:17px 36px;font-size:13.5px;letter-spacing:.5px;text-transform:uppercase;transition:.3s;}
+.btn-primary:hover{background:var(--burgundy-l);}
+.btn-ghost{font-size:14px;border-bottom:2px solid var(--brass);color:var(--brass);padding-bottom:4px;transition:.3s;}
+.btn-ghost:hover{color:var(--burgundy);border-bottom-color:var(--burgundy);}
 
 /* areas grid */
 .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
@@ -97,7 +99,7 @@ section{padding:120px 0;}
 
 /* testimonials */
 .testi{text-align:center;position:relative;background:
-    linear-gradient(160deg,rgba(249,247,244,.95),rgba(240,237,233,.9)),
+    linear-gradient(160deg,rgba(250,250,248,.95),rgba(245,243,240,.9)),
     url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=60') center/cover fixed;}
 .t-wrap{max-width:720px;margin:0 auto;}
 .t-slide{display:none;}
@@ -144,7 +146,7 @@ footer .flogo{font-family:'Libre Baskerville',serif;color:var(--text);font-size:
   .wrap{padding:0 20px;}
   section{padding:60px 0;}
   form{padding:24px;}
-  .hero h1{font-size:42px;}
+  .hero-content h1{font-size:42px;}
   .hero-actions{flex-direction:column;gap:12px; align-items: stretch;}
   .btn-primary,.btn-ghost{width:100%;text-align:center;}
   .areas-grid{grid-template-columns:1fr;}
@@ -170,6 +172,8 @@ footer .flogo{font-family:'Libre Baskerville',serif;color:var(--text);font-size:
 </header>
 <section class="hero">
 <div class="hero-bgimg"></div>
+</section>
+<section>
 <div class="wrap hero-content">
 <div class="eyebrow">Advocacia empresarial &amp; contenciosa</div>
 <h1>Defendemos interesses complexos com <i>precisão</i> estratégica.</h1>
@@ -284,7 +288,7 @@ footer .flogo{font-family:'Libre Baskerville',serif;color:var(--text);font-size:
 </div>
 <div class="field">
 <label>Mensagem</label>
-<textarea placeholder="Breve resumo da demanda..." rows="4"></textarea>
+<textarea placeholder="Breve resumo da demanda..." rows="5"></textarea>
 </div>
 <button type="submit">Solicitar Reunião</button>
 </form>
@@ -292,66 +296,37 @@ footer .flogo{font-family:'Libre Baskerville',serif;color:var(--text);font-size:
 </section>
 <footer>
 <div class="wrap">
-<div class="flogo">Almeida <b>&amp;</b> Duarte</div>
+<div class="flogo"><b style="color:var(--burgundy);">Almeida</b> <b>&amp;</b> <b style="color:var(--burgundy);">Duarte</b></div>
 <p>© 2024 Almeida &amp; Duarte Advogados. Todos os direitos reservados.</p>
 </div>
 </footer>
+
 <script>
-function scrollTeam(dir){
+function scrollTeam(dir) {
   const track = document.getElementById('teamTrack');
-  track.scrollBy({ left: dir * 300, behavior: 'smooth' });
+  const scrollAmount = 300;
+  track.scrollBy({ left: dir * scrollAmount, behavior: 'smooth' });
 }
 
 window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
-  if(window.scrollY > 50) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
-  
-  const reveals = document.querySelectorAll('.reveal');
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const revealTop = el.getBoundingClientRect().top;
-    if(revealTop < windowHeight - 100) el.classList.add('show');
-  });
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
-window.dispatchEvent(new Event('scroll'));
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (img.complete) {
-      img.classList.add('loaded');
-    } else {
-      img.addEventListener('load', () => img.classList.add('loaded'));
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
     }
   });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (img.complete) {
-      img.classList.add('loaded');
-    } else {
-      img.addEventListener('load', () => img.classList.add('loaded'));
-    }
-  });
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (img.complete) {
-      img.classList.add('loaded');
-    } else {
-      img.addEventListener('load', () => img.classList.add('loaded'));
-    }
-  });
-});
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
